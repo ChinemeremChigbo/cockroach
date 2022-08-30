@@ -1,0 +1,39 @@
+@require '~src/components/core/index.styl'
+.container {
+  display: flex;
+  gap: 10px 20px; /* row-gap column gap */
+}
+
+.sql-shell {
+  width: 50%;
+  height: 250px;
+  border-radius: 3px;
+  font-family $font-family--monospace
+  font-weight: bold;
+  padding: (5px 0px 5px 0px);
+
+  // The first child of the codemirror window handles most of the container
+  // for the SQL text editor.
+  :global(.cm-editor) {
+    height: 100%;
+    border-radius: 3px;
+    // Overflow patterns remove the ability to use outlines on the sql shell component
+    // so while the editor isn't focused, include a 1px padding for the content to keep the
+    // heights properly aligned when focusing.
+    border: 1px solid $colors--neutral-0;
+  }
+
+  // Override a dotted focus outline that is visible on light mode. This required
+  // an !important as the outline class was highly specific.
+  :global(.cm-focused) {
+    outline: 0px !important;
+    border: 1px solid $colors--primary-blue-2;
+  }
+}
+
+.table{
+  width: 50%;
+  height: 250px;
+  border-radius: 3px;
+  padding: (5px 10px 5px 0px);
+}

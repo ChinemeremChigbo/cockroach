@@ -10,3 +10,4 @@
 
 export * from "./textInput";
 export * from "./passwordInput";
+export * from "./textArea";

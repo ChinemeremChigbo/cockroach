@@ -70,6 +70,7 @@ import ScheduleDetails from "src/views/schedules/scheduleDetails";
 import Settings from "src/views/reports/containers/settings";
 import Stores from "src/views/reports/containers/stores";
 import SQLActivityPage from "src/views/sqlActivity/sqlActivityPage";
+import { SQLShellPage } from "src/views/sqlShellPage/sqlShellPage";
 import StatementDetails from "src/views/statements/statementDetails";
 import SessionDetails from "src/views/sessions/sessionDetails";
 import TransactionDetails from "src/views/transactions/transactionDetails";
@@ -214,6 +215,9 @@ export const App: React.FC<AppProps> = (props: AppProps) => {
                     path="/sql-activity"
                     component={SQLActivityPage}
                   />
+
+                  {/* SQL shell */}
+                  <Route exact path="/sql-shell" component={SQLShellPage} />
 
                   {/* Active executions */}
                   <Route

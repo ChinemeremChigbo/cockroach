@@ -45,6 +45,11 @@ export class Sidebar extends React.Component<SidebarProps> {
       activeFor: ["/sql-activity", "/session", "/transaction", "/statement"],
     },
     {
+      path: "/sql-shell",
+      text: "SQL Shell",
+      activeFor: ["/sql-shell"],
+    },
+    {
       path: "/insights",
       text: "Insights",
       activeFor: ["/insights"],
